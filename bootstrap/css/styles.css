@@ -16,3 +16,20 @@ h1 {
 .alert {
     margin: 20px 0;
 }
+table {
+    width: 100%; 
+    font-size: 18px; 
+}
+
+
+
+
+div > p {
+    color: red;
+    
+}
+
+
+div + p {
+    color: red;
+}
