@@ -1,12 +1,28 @@
-// scripts.js
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Strona została w pełni załadowana.');
 
-    // Przykład dodania dynamicznego zachowania
-    const alertElement = document.querySelector('.alert');
-    if (alertElement) {
-        alertElement.addEventListener('closed.bs.alert', function () {
-            console.log('Ostrzeżenie zostało zamknięte.');
-        });
+const osoby = [
+    {
+        imie: "Jan",
+        wiek: 30,
+        miasto: "Warszawa"
+    },
+    {
+        imie: "Anna",
+        wiek: 25,
+        miasto: "Kraków"
+    },
+    {
+        imie: "Piotr",
+        wiek: 35,
+        miasto: "Gdańsk"
     }
-});
+];
+
+document.getElementById("button").addEventListener("click", () => {
+    osoby.forEach((props) => {
+        for(const property in props) {
+
+            console.log(`${property}: ${props[property]}`)
+
+        }
+        
+    })})
